@@ -12,7 +12,7 @@ Este proyecto implementa una simulación completa de un sistema radar de vigilan
 
 ## Descripción General del Proyecto
 
-El objetivo principal es simular el funcionamiento de un radar pulsado, inspirado en sistemas como el AN/MPQ-64 Sentinel, cubriendo desde el cálculo de parámetros fundamentales hasta la detección y representación de blancos.
+El objetivo principal es simular el funcionamiento de un radar pulsado, inspirado en sistemas como el AN/MPQ-64 Sentinel, cubriendo desde el cálculo de parámetros fundamentales hasta la detección y representación de blancos en un entorno dinámico.
 
 Características clave:
 1.  **Cálculo de Parámetros Radar:** Determinación de alcance máximo (Rmax), resolución, PRF, alcance no ambiguo (Rmax_na), sensibilidad del receptor y umbral de detección.
