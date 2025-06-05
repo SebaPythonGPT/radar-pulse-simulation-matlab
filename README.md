@@ -40,9 +40,9 @@ El informe técnico detallado del proyecto, incluyendo el fundamento teórico, a
 +-- .gitignore
 +-- LICENSE
 +-- README.md
-+-- requirements.txt                                           (Lista de Toolboxes de MATLAB necesarios)
++-- requirements.txt                                          (Lista de Toolboxes de MATLAB necesarios)
 +-- docs/
-|+-- Proyecto_Sistemas_Radionavegacion_Simulacion_Radar.pdf    (Informe completo del proyecto)
+|+-- Proyecto_Sistemas_Radionavegacion_Simulacion_Radar.pdf   (Informe completo del proyecto)
 +--  src/
 |+-- SimulacionProyectoSRP_MiguelCarralero_FranciscoOrcha.m   (Script principal de la simulación)
 +-- ...
