@@ -44,6 +44,43 @@ El informe técnico detallado del proyecto, incluyendo el fundamento teórico, a
 +-- docs/
 |+-- Proyecto_Sistemas_Radionavegacion_Simulacion_Radar.pdf    (Informe completo del proyecto)
 +--  src/
-|+--  SimulacionProyectoSRP_MiguelCarralero_FranciscoOrcha.m   (Script principal de la simulación)
+|+-- SimulacionProyectoSRP_MiguelCarralero_FranciscoOrcha.m   (Script principal de la simulación)
 +-- ...
 ```
+
+## Preparación del Entorno
+
+### 1. Software Requerido
+*   **MATLAB [R2024b o superior]** (Recomendado).
+*   **Toolboxes de MATLAB (ver `requirements.txt`):**
+    *   **shnidman.m** (Opcional)
+    *   Asegúrese de tener instalado el **Statistics and Machine Learning Toolbox**.
+
+### 2. Configuración del Proyecto
+1.  Clone este repositorio:
+    ```bash
+    git clone https://github.com/MiguelCarra/radar-pulse-simulation-matlab.git
+    ```
+2.  Navegue a la carpeta del proyecto en MATLAB.
+
+No se requieren datasets externos, ya que la simulación genera todos los datos necesarios dinámicamente.
+
+## Ejecución de la Simulación
+
+1.  Abra MATLAB y navegue hasta el directorio `src/` dentro de la carpeta del proyecto clonado.
+2.  Ejecute el script principal desde la ventana de comandos de MATLAB o abriéndolo en el editor y presionando "Run":
+    ```matlab
+    SimulacionProyectoSRP_MiguelCarralero_FranciscoOrcha
+    ```
+La simulación comenzará, mostrando la interfaz gráfica con las tres pantallas (Posición Real, PPI, A-Scope). La simulación se ejecutará hasta que se cierre manualmente la ventana de la figura.
+
+## Resultados y Discusión
+
+El análisis detallado del comportamiento del sistema radar, los diferentes escenarios de detección probados (blancos en zona ciega, ambigüedad de rango, paso por Rmin, etc.), y las conclusiones del proyecto se encuentran en el informe completo:
+*   **[Informe del Proyecto: Simulación de un Sistema Radar](docs/Proyecto_Sistemas_Radionavegacion_Simulacion_Radar.pdf)**
+
+El informe también cubre los problemas encontrados durante el desarrollo y las soluciones implementadas para garantizar una simulación robusta y visualmente clara.
+
+## Licencia
+
+Este proyecto está distribuido bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
