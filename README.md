@@ -31,7 +31,7 @@ El informe técnico detallado del proyecto, incluyendo el fundamento teórico, a
 
 *   **Lenguaje y Entorno:** MATLAB (R2024b o superior)
 *   **Toolboxes de MATLAB Requeridos:**
-    *   **shnidman.m**: Necesario para el cálculo de la SNR requerida. Se puede instalar desde el Add-Ons Explorer de MATLAB. El script incluye una alternativa (aproximación de Albersheim) si este Add-Ons no está disponible.
+    *   **Phased Array System Toolbox**: Necesario para el cálculo de la SNR requerida (función `shnidman.m`). Se puede instalar desde el Add-Ons Explorer de MATLAB. El script incluye una alternativa (aproximación de Albersheim) si este Add-Ons no está disponible.
     *   **Statistics and Machine Learning Toolbox**: Utilizado para la función `exprnd` (modelado de RCS fluctuante).
     *   Funciones gráficas y de cálculo de MATLAB estándar.
 
@@ -53,8 +53,7 @@ El informe técnico detallado del proyecto, incluyendo el fundamento teórico, a
 ### 1. Software Requerido
 *   **MATLAB [R2024b o superior]** (Recomendado).
 *   **Toolboxes de MATLAB (ver `requirements.txt`):**
-    *   **shnidman.m** (Opcional)
-    *   Asegúrese de tener instalado el **Statistics and Machine Learning Toolbox**.
+    *   Asegúrese de tener instalado **Phased Array System Toolbox** y **Statistics and Machine Learning Toolbox**.
 
 ### 2. Configuración del Proyecto
 1.  Clone este repositorio:
